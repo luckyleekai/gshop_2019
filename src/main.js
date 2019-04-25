@@ -1,12 +1,11 @@
+// webpack打包时项目的入口JS
 import Vue from 'vue'
-import App from './App.vue'
+import App from './App'
 import router from './router'
-import store from './store'
-
-Vue.config.productionTip = false
+import '@/common/stylus/reset.styl'
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+  el: '#app',
+  render: h => h(App),
+  router
+})
